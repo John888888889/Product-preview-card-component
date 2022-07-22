@@ -1,0 +1,138 @@
+:root {
+    --primaryDark: hsl(158, 36%, 37%);
+    --primaryLight: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%);
+    --greyBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+.containerMobile {
+    display: none;
+}
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primaryLight);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .725rem;   
+    color: var(--greyBlue);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    line-height: 1.5rem;
+    color: var(--darkBlue);
+    font-family: 'Fraunces', serif;
+}
+
+h2 {
+    font-weight: normal;
+    letter-spacing: .25rem;
+    font-size: .725rem;
+}
+
+p {
+    line-height: 1.25rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.container {
+    width: 35%;
+    min-width: 500px;
+    margin: auto;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+.prices {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.actualPrice p {
+    color: var(--primaryDark);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+.oldPrice p {
+    text-decoration: line-through;
+    
+}
+.attribution { 
+    font-size: 11px;
+    position: fixed;
+    bottom: 5px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    background-color: var(--primaryDark);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    background-color: hsl(167, 53%, 23%);
+    cursor: pointer;
+}
+
+button img {
+    width: 20px;
+    height: 100%;
+    margin: auto 0 auto 0;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        display: none;
+    }
+    .containerMobile {
+        display: contents;
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
+        background-color: var(--white);
+        display: grid;
+        border-radius: 10px;
+    }
+
+    .mobile {
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 1rem;
+    }
+    
+    .containerMobile button {
+        margin-bottom: 2rem;
+    }
+}
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
